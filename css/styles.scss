@@ -1,0 +1,130 @@
+//  Variables
+
+$purple: #52317a;
+
+@mixin transition {
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+#demos-democracy-page a {
+	color: $purple;
+	text-decoration: none;
+}
+
+#demos-democracy-page a:hover {
+	text-decoration: none;
+	color: #fff !important;
+	background-color: $purple;
+}
+
+#demos-democracy-page.l-centered {
+	margin: 30px 0;
+}
+
+#title-banner {
+	margin-bottom: 10px;
+}
+
+#demos-democracy-page .item {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+// #demos-democracy-page .featured-image {
+// 	width: 760px;
+// 	height: 304px;
+// 	background-color: #ddd;
+// }
+
+#demos-democracy-page .more {
+	position: absolute;
+	font-weight: 100;
+	right: 20px;
+	margin-top: -46px;
+	font-size: 40px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	height: 28px;
+	width: 28px;
+	line-height: 25px;
+	text-indent: 3px;
+	color: #fff;
+	cursor: pointer;
+	@include transition;
+}
+
+
+
+#demos-democracy-page .item.active {
+	// max-height: 800px;
+
+	.more {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		@include transition;
+	}
+
+	.item-content {
+		display: block;
+	}
+}
+
+#demos-democracy-page .item-content {
+	padding: 20px;
+	display: none;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	margin-bottom: 5px;
+
+	h3 {
+		font-weight: 100;
+		font-size: 28px;
+		margin: 0 0 10px;
+		color: $purple;
+		line-height: 32px;
+	}
+
+	h4 {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #999;
+	}
+
+	h5 {
+		color: #444;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 15px 0 10px;
+
+	}
+
+	p {
+	margin-bottom: 5px;
+	}
+
+	.internal-image {
+		margin-top: 15px;
+	}
+}
+
+
+
